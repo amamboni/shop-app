@@ -18,7 +18,7 @@ class ProductFactory extends Factory
     {
         return [
             'name' => fake()->sentence(),
-            'price' => fake()->randomFloat(),
+            'price' => fake()->randomFloat(2, 100, 1000),
         ];
     }
 }

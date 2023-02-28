@@ -4,24 +4,38 @@
 - Node/NPM
 
 ## How to Run
-- Setup .env variables
-- Install dependencies:
+1. Setup .env variables:
 ```
-composer install
-npm install
+copy .env.example .env
+or
+cp .env.example .env
 ```
+Then update Database and Mail variables.
 
-- Run the migrations:
+2. Install dependencies:
+```
+composer install && npm install
+```
+3. Generate application key:
+```
+php artisan key:generate
+```
+4. Run the migrations:
 ```
 php artisan migrate
 ```
 
-- Run the application:
+5. Build UI:
+```
+npm run build
+```
+
+6. Run the application:
 ```
 php artisan serve
 ```
 
-- Run queue jobs
+7. Run queue jobs in a different terminal/cmd:
 ```
 php artisan queue:work 
 ```

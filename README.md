@@ -26,6 +26,12 @@ php artisan serve
 php artisan queue:work 
 ```
 
+## Testing
+Run tests using:
+```
+php artisan test
+```
+
 ## Registering a user
 ### Administrator
 - Check the Administrator checkbox to set user to administrator

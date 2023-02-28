@@ -100,7 +100,7 @@ class ProductTest extends TestCase
 
         $response = $this
             ->actingAs($user)
-            ->patch('/products/1', [
+            ->patch("/products/$product->id", [
                 'name' => 'Something',
                 'price' => 1000,
             ]);
@@ -124,7 +124,7 @@ class ProductTest extends TestCase
 
         $response = $this
             ->actingAs($user)
-            ->patch('/products/1', [
+            ->patch("/products/$product1->id", [
                 'name' => $product2->name,
                 'price' => 1000,
             ]);
@@ -141,7 +141,7 @@ class ProductTest extends TestCase
 
         $response = $this
             ->actingAs($user)
-            ->delete('/products/1');
+            ->delete("/products/$product->id");
 
         $response
             ->assertSessionHasNoErrors()
